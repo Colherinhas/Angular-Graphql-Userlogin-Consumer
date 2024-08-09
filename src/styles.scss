@@ -9,6 +9,18 @@
   --pink: #cd327c;
 }
 
+* {
+  font-family: "Gotham";
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+}
+
 @font-face {
   font-family: "Gotham";
   src: url("assets/fonts/gotham-light.woff2") format("truetype");

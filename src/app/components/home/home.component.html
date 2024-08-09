@@ -1,0 +1,33 @@
+<div *ngIf="user">
+  <img [src]="user.photoUrl" alt="{{ user.name }}'s avatar" />
+  <div class="userInfo">
+    <h1>{{ user.name }}</h1>
+    <p>Email: {{ user.email }}</p>
+    <p>Phone: {{ user.phone }}</p>
+    <p>Address: {{ user.address }}</p>
+
+    <div *ngIf="user.userSocialMedias?.length > 0" class="social-links">
+      <a
+        *ngFor="let media of user.userSocialMedias"
+        [href]="media.link"
+        target="_blank"
+        class="social-icon"
+      >
+        <img
+          [src]="getIconPath(media.socialMedia)"
+          [alt]="media.socialMedia + ' icon'"
+        />
+      </a>
+    </div>
+  </div>
+
+  <div class="repositories">
+    <h2>Repositories</h2>
+    <div class="repo-grid">
+      <div *ngFor="let repo of user.repositories" class="repo-box">
+        <a [href]="repo.link" target="_blank">{{ repo.link }}</a>
+        <p>{{ repo.language }}</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -18,6 +18,11 @@
     "@angular/platform-browser": "^18.1.0",
     "@angular/platform-browser-dynamic": "^18.1.0",
     "@angular/router": "^18.1.0",
+    "@apollo/client": "^3.11.4",
+    "@fortawesome/fontawesome-free": "^6.6.0",
+    "apollo-angular": "^7.0.2",
+    "dotenv": "^16.4.5",
+    "graphql": "^16.9.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"

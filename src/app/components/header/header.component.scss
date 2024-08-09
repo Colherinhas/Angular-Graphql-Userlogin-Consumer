@@ -5,11 +5,13 @@ header {
   justify-content: center;
   width: 100%;
   min-width: 100vw;
+
+  gap: 32px;
 }
 
 header .logo-container {
   background: var(--pink);
-  padding: 24px;
+  padding: 1%;
   width: 100%;
 
   display: flex;
@@ -27,8 +29,10 @@ header .text-container {
 header .text-container h1 {
   font-size: 34px;
   color: var(--dark-grey);
+  padding-top: 10%;
+  padding-bottom: 10%;
 }
 
 header .text-container p {
-  color: var(--light-grey);
+  color: var(grey);
 }
