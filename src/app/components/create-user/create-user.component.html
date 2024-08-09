@@ -1,0 +1,38 @@
+<div class="create-user-container">
+  <h1>Criar Conta</h1>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Nome</label>
+      <input type="text" id="name" [(ngModel)]="name" name="name" required />
+    </div>
+    <div class="form-group">
+      <label for="email">E-mail</label>
+      <input
+        type="email"
+        id="email"
+        [(ngModel)]="email"
+        name="email"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="cpf">CPF</label>
+      <input type="cpf" id="cpf" [(ngModel)]="cpf" name="cpf" required />
+    </div>
+    <div class="form-group">
+      <label for="password">Senha</label>
+      <input
+        type="password"
+        id="password"
+        [(ngModel)]="password"
+        name="password"
+        required
+      />
+    </div>
+    <button type="submit">Criar Conta</button>
+    <p>
+      Já possui uma conta?
+      <span class="login-link" (click)="onLoginClick()">Faça login</span>
+    </p>
+  </form>
+</div>

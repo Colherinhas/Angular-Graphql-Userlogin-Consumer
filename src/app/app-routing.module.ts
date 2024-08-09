@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthComponent } from './components/auth/auth.component';
+import { CreateUserComponent } from './components/create-user/create-user.component';
 import { HomeComponent } from './components/home/home.component';
 import { UpdateUserDataComponent } from './components/update-user-data/update-user-data.component';
 
@@ -9,6 +10,7 @@ const routes: Routes = [
   { path: 'auth', component: AuthComponent },
   { path: 'home', component: HomeComponent },
   { path: 'update', component: UpdateUserDataComponent },
+  { path: 'createuser', component: CreateUserComponent },
 ];
 
 @NgModule({

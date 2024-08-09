@@ -2,19 +2,19 @@
   <div class="text-container">
     <h1></h1>
   </div>
-  <h2>Atualizar dados</h2>
+  <h2>Atualizar dados de usuário</h2>
   <form (ngSubmit)="onSubmit()">
     <div class="form-group">
-      <label for="name">Name</label>
+      <label for="name">Nome</label>
       <input type="name" [(ngModel)]="name" name="name" />
 
       <label for="phone">Phone</label>
       <input type="phone" [(ngModel)]="phone" name="phone" />
 
-      <label for="photoUrl">Photo link</label>
+      <label for="photoUrl">Endereço (link) da foto de perfil</label>
       <input type="photoUrl" [(ngModel)]="photoUrl" name="photoUrl" />
 
-      <label for="address">Address</label>
+      <label for="address">Endereço físico</label>
       <input type="address" [(ngModel)]="address" name="address" />
     </div>
     <button type="submit">Submit</button>

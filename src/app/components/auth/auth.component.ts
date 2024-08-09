@@ -27,4 +27,8 @@ export class AuthComponent {
       this.$router.navigate(['home']);
     });
   }
+
+  onClick() {
+    this.$router.navigate(['createuser']);
+  }
 }

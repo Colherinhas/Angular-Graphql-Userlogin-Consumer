@@ -29,7 +29,6 @@ export class UpdateUserDataComponent implements OnInit {
   loadUserData() {
     const userSession = localStorage.getItem('userSession');
     const btoken = localStorage.getItem('token') as string;
-    console.log('userSession:', userSession);
     if (userSession) {
       const userSessionNow = JSON.parse(userSession);
       const user = userSessionNow.user;
@@ -52,9 +51,7 @@ export class UpdateUserDataComponent implements OnInit {
       photoUrl: this.photoUrl,
       phone: this.phone,
     };
-    console.log('submitted data:', data);
     this.$update.updateUser(data).subscribe((response) => {
-      console.log('updateUser response:', response);
       this.$router.navigate(['home']);
     });
   }

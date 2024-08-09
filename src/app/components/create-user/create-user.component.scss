@@ -1,21 +1,13 @@
-.user-data-container {
-  max-width: 500px; // um pouco maior do que o container de login
+.create-user-container {
+  max-width: 500px;
   margin: 0 auto;
   padding: 25px;
   border: 1px solid var(--light-grey);
   border-radius: 5px;
   box-shadow: 0px 0px 10px var(--grey);
+  background-color: white;
 
-  .text-container {
-    h1 {
-      font-size: 24px;
-      color: var(--deep-blue);
-      text-align: center;
-      margin-bottom: 15px;
-    }
-  }
-
-  h2 {
+  h1 {
     margin-bottom: 20px;
     color: var(--deep-blue);
     text-align: center;
@@ -59,6 +51,26 @@
       &:disabled {
         background-color: var(--light-grey);
         cursor: not-allowed;
+      }
+    }
+
+    p {
+      text-align: center;
+      margin-top: 15px;
+
+      .login-link {
+        color: var(--deep-blue);
+        text-decoration: underline;
+        cursor: pointer;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: var(--grey);
+        }
+
+        &:active {
+          color: var(--dark-blue);
+        }
       }
     }
   }

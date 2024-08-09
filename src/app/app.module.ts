@@ -13,12 +13,11 @@ import { HeaderComponent } from './components/header/header.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GraphQLModule } from '../graphql/graphql.module';
 import { AuthModule } from './components/auth/auth.module';
+import { CreateUserModule } from './components/create-user/create-user.module';
 import { HomeModule } from './components/home/home.module';
-import { UpdateUserDataComponent } from './components/update-user-data/update-user-data.component';
 import { UpdateUserDataModule } from './components/update-user-data/update-user-data.module';
-
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, UpdateUserDataComponent],
+  declarations: [AppComponent, HeaderComponent],
   imports: [
     ApolloModule,
     AppRoutingModule,
@@ -30,6 +29,7 @@ import { UpdateUserDataModule } from './components/update-user-data/update-user-
     AuthModule,
     HomeModule,
     UpdateUserDataModule,
+    CreateUserModule,
   ],
   providers: [provideHttpClient(withInterceptorsFromDi())],
   bootstrap: [AppComponent],

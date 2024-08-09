@@ -62,4 +62,19 @@
     text-align: center;
     margin-top: 10px;
   }
+
+  .register-link {
+    color: var(--deep-blue);
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: var(--grey);
+    }
+
+    &:active {
+      color: var(--dark-blue);
+    }
+  }
 }

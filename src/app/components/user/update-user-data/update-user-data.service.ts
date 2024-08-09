@@ -1,7 +1,7 @@
 import { inject, Inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { UPDATE_USER_MUTATION } from '../../../graphql/collections/mutations/update-user.mutation';
-import { GraphQLService } from '../../../graphql/graphql.service';
+import { UPDATE_USER_MUTATION } from '../../../../graphql/collections/mutations/update-user.mutation';
+import { GraphQLService } from '../../../../graphql/graphql.service';
 
 @Injectable({
   providedIn: 'root',

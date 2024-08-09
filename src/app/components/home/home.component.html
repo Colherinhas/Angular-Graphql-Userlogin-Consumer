@@ -27,6 +27,13 @@
       style="cursor: pointer"
       >Add address</span
     >
+    <button
+      class="update-data-button"
+      (click)="navigateToUpdateUser()"
+      style="cursor: pointer"
+    >
+      Atualizar dados cadastrais
+    </button>
 
     <div *ngIf="user.userSocialMedias?.length > 0" class="social-links">
       <a

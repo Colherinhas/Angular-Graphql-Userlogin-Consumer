@@ -19,6 +19,20 @@ span {
   }
 }
 
+button {
+  width: 25%;
+  padding: 3px;
+  background-color: var(--deep-blue);
+  color: white;
+  font-size: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: var(--grey);
+  }
+}
 .userInfo {
   display: flex;
   flex-direction: column;
@@ -60,7 +74,6 @@ img:hover {
   transition: transform 0.3s ease;
 }
 
-/* Social Media Links */
 .social-links {
   display: row;
   flex-direction: row;
@@ -88,7 +101,6 @@ img:hover {
   }
 }
 
-/* Repositories Section */
 .repositories {
   width: 100%;
   max-width: 800px;
