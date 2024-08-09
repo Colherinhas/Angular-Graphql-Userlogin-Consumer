@@ -14,18 +14,22 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GraphQLModule } from '../graphql/graphql.module';
 import { AuthModule } from './components/auth/auth.module';
 import { HomeModule } from './components/home/home.module';
+import { UpdateUserDataComponent } from './components/update-user-data/update-user-data.component';
+import { UpdateUserDataModule } from './components/update-user-data/update-user-data.module';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent],
+  declarations: [AppComponent, HeaderComponent, UpdateUserDataComponent],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
     ApolloModule,
-    AuthModule,
+    AppRoutingModule,
+    BrowserModule,
     FormsModule,
     GraphQLModule,
-    HomeModule,
     ReactiveFormsModule,
+
+    AuthModule,
+    HomeModule,
+    UpdateUserDataModule,
   ],
   providers: [provideHttpClient(withInterceptorsFromDi())],
   bootstrap: [AppComponent],

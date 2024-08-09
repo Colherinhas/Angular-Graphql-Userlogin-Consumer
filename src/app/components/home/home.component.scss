@@ -8,6 +8,17 @@ div {
   border-radius: 10px;
 }
 
+span {
+  font-size: 14px;
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: underline;
+
+  &:hover {
+    color: #0056b3;
+  }
+}
+
 .userInfo {
   display: flex;
   flex-direction: column;

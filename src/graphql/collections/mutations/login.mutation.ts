@@ -8,7 +8,8 @@ export const LOGIN_MUTATION = `
           data: {
            email: $email, 
            password: $password 
-          }) 
+          }
+        ) 
         {
           accessToken
           user {

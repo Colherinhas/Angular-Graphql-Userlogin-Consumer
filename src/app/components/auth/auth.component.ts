@@ -20,9 +20,10 @@ export class AuthComponent {
     this.$auth.login(this.email, this.password).subscribe((data) => {
       const userSession = {
         user: data.login.user,
-        accessToken: data.login.accessToken,
       };
+      localStorage.setItem('token', JSON.stringify(data.login.accessToken));
       localStorage.setItem('userSession', JSON.stringify(userSession));
+
       this.$router.navigate(['home']);
     });
   }

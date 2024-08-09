@@ -1,4 +1,5 @@
 import { Component, inject, Inject, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { FIND_USER_BY_ID } from '../../../graphql/collections/queries/find-user.query';
 import { GraphQLService } from '../../../graphql/graphql.service';
 
@@ -10,6 +11,8 @@ import { GraphQLService } from '../../../graphql/graphql.service';
 export class HomeComponent implements OnInit {
   @Inject(GraphQLService)
   private readonly $graphql: GraphQLService = inject(GraphQLService);
+  @Inject(Router)
+  private readonly $router: Router = inject(Router);
 
   user: any;
   id: any;
@@ -44,5 +47,9 @@ export class HomeComponent implements OnInit {
       default:
         return '../../assets/icons/default.svg';
     }
+  }
+
+  navigateToUpdateUser() {
+    this.$router.navigate(['update']);
   }
 }

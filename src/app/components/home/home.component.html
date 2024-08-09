@@ -1,10 +1,32 @@
 <div *ngIf="user">
-  <img [src]="user.photoUrl" alt="{{ user.name }}'s avatar" />
+  <img
+    *ngIf="user.photoUrl"
+    [src]="user.photoUrl"
+    alt="{{ user.name }}'s avatar"
+  />
+  <span
+    *ngIf="!user.photoUrl"
+    (click)="navigateToUpdateUser()"
+    style="cursor: pointer"
+    >Add photo</span
+  >
   <div class="userInfo">
     <h1>{{ user.name }}</h1>
     <p>Email: {{ user.email }}</p>
-    <p>Phone: {{ user.phone }}</p>
-    <p>Address: {{ user.address }}</p>
+    <p *ngIf="user.phone">Phone: {{ user.phone }}</p>
+    <span
+      *ngIf="!user.phone"
+      (click)="navigateToUpdateUser()"
+      style="cursor: pointer"
+      >Add phone</span
+    >
+    <p *ngIf="user.address">Address: {{ user.address }}</p>
+    <span
+      *ngIf="!user.address"
+      (click)="navigateToUpdateUser()"
+      style="cursor: pointer"
+      >Add address</span
+    >
 
     <div *ngIf="user.userSocialMedias?.length > 0" class="social-links">
       <a
