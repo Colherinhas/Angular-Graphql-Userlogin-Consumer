@@ -51,4 +51,16 @@ export class UpdateUserDataComponent implements OnInit {
       this.$router.navigate(['home']);
     });
   }
+
+  onDeleteSubmit() {
+    const variables = { id: this.id };
+    this.$update.deleteUser(variables).subscribe((response) => {
+      console.log('Deleted user.');
+      this.$router.navigate(['auth']);
+    });
+  }
+
+  back() {
+    this.$router.navigate(['home']);
+  }
 }

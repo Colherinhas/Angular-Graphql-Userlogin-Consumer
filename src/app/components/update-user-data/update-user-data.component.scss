@@ -69,4 +69,32 @@
       }
     }
   }
+  .delete-user {
+    padding-top: 10px;
+    color: red;
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: bold;
+    display: inline-block;
+    margin: 0 auto;
+    text-justify: center;
+
+    &:hover {
+      color: darkred;
+    }
+  }
+
+  .back {
+    padding-top: 10px;
+    color: var(--deep-blue);
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: bold;
+    display: inline-block;
+    margin: 0 auto;
+
+    &:hover {
+      color: darkblue;
+    }
+  }
 }
