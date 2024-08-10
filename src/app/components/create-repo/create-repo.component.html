@@ -17,13 +17,16 @@
       <label for="languages">Linguagens de Programação</label>
       <select
         id="languages"
-        [(ngModel)]="language"
-        name="language"
+        [(ngModel)]="selectedLanguages"
+        name="languages"
         multiple
         required
       >
-        <option *ngFor="let lang of programmingLanguages" [ngValue]="lang">
-          {{ lang }}
+        <option
+          *ngFor="let lang of programmingLanguagesOptions"
+          [ngValue]="lang.value"
+        >
+          {{ lang.label }}
         </option>
       </select>
     </div>

@@ -13,6 +13,7 @@ export class CreateRepoService {
     link: string;
     language: string[];
   }): Observable<any> {
+    console.log(data);
     return this.$graphql.mutate(CREATE_REPO_MUTATION, data);
   }
 }
