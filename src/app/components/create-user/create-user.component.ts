@@ -31,8 +31,7 @@ export class CreateUserComponent {
       phone: this.phone,
       photoUrl: this.photoUrl,
     };
-    console.log(data);
-    this.$createUser.execute(data).subscribe((data) => {
+    this.$createUser.createUser(data).subscribe((data) => {
       this.$router.navigate(['auth']);
     });
   }

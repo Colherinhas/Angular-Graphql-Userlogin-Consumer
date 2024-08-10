@@ -1,3 +1,5 @@
+@import "../../../styles.scss";
+
 div {
   display: flex;
   flex-direction: column;
@@ -19,20 +21,80 @@ span {
   }
 }
 
+.button-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+}
+
+:root {
+  --light-grey: #f1f1f1;
+  --dark-grey: #333333;
+  --grey: #5a5a58;
+  --deep-blue: #5f259f;
+  --green: #2fc022;
+  --deep-red: #b51f31;
+  --pink: #cd327c;
+}
+
+* {
+  font-family: "Gotham";
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.button-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+}
+
 button {
-  width: 25%;
-  padding: 3px;
-  background-color: var(--deep-blue);
-  color: white;
-  font-size: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
   border: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s, transform 0.3s;
+
+  &.update-data-button {
+    background-color: var(--deep-blue);
+  }
+
+  &.upsert-social-media-button {
+    background-color: var(--green);
+  }
+
+  &.create-repo-button {
+    background-color: var(--deep-red);
+  }
 
   &:hover {
-    background-color: var(--grey);
+    background-color: lighten(black, 10%);
+    transform: scale(1.05);
   }
 }
+
 .userInfo {
   display: flex;
   flex-direction: column;
@@ -64,7 +126,7 @@ img {
   width: 150px;
   height: 150px;
   object-fit: cover;
-  border: 4px;
+  border: 5px;
   margin-bottom: 20px;
 }
 

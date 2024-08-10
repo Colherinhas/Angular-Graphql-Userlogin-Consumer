@@ -28,7 +28,6 @@ export class HomeComponent implements OnInit {
     }
     const sessionData = JSON.parse(userSession);
     this.id = sessionData.user.id;
-    console.log('id:', this.id);
     this.$graphql.query(FIND_USER_BY_ID, { id: this.id }).subscribe((data) => {
       this.user = data.user;
     });
@@ -51,5 +50,13 @@ export class HomeComponent implements OnInit {
 
   navigateToUpdateUser() {
     this.$router.navigate(['update']);
+  }
+
+  navigateToUpsertSocialMedia() {
+    this.$router.navigate(['addSocial']);
+  }
+
+  navigateToCreateRepo() {
+    this.$router.navigate(['createRepo']);
   }
 }

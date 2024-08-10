@@ -12,7 +12,6 @@ export class UpdateUserDataService {
 
   updateUser(variables: {
     id: string;
-    token: string;
     name?: string;
     address?: string;
     photoUrl?: string;

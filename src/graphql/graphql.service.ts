@@ -21,17 +21,12 @@ export class GraphQLService {
   }
 
   public mutate<T>(mutation: string, variables?: any): Observable<any> {
-    const token = variables.token;
-
-    delete variables.token;
-
     return this.apollo
       .mutate<T>({
         mutation: gql`
           ${mutation}
         `,
         variables,
-        context: { Authorization: token },
       })
       .pipe(map((result) => result.data));
   }

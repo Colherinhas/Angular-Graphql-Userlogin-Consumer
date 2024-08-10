@@ -20,7 +20,6 @@ export class UpdateUserDataComponent implements OnInit {
   address: string = '';
   photoUrl: string = '';
   phone: string = '';
-  token: string = '';
 
   ngOnInit() {
     this.loadUserData();
@@ -28,13 +27,11 @@ export class UpdateUserDataComponent implements OnInit {
 
   loadUserData() {
     const userSession = localStorage.getItem('userSession');
-    const btoken = localStorage.getItem('token') as string;
     if (userSession) {
       const userSessionNow = JSON.parse(userSession);
       const user = userSessionNow.user;
 
       this.id = user.id;
-      this.token = btoken;
       this.name = user.name;
       this.address = user.address;
       this.photoUrl = user.photoUrl;
@@ -45,7 +42,6 @@ export class UpdateUserDataComponent implements OnInit {
   onSubmit() {
     const data = {
       id: this.id,
-      token: this.token,
       name: this.name,
       address: this.address,
       photoUrl: this.photoUrl,

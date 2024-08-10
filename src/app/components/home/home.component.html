@@ -4,6 +4,11 @@
     [src]="user.photoUrl"
     alt="{{ user.name }}'s avatar"
   />
+  <img
+    *ngIf="!user.photoUrl"
+    [src]="'assets/icons/user.svg'"
+    alt="{{ user.name }}'s avatar"
+  />
   <span
     *ngIf="!user.photoUrl"
     (click)="navigateToUpdateUser()"
@@ -27,14 +32,20 @@
       style="cursor: pointer"
       >Add address</span
     >
-    <button
-      class="update-data-button"
-      (click)="navigateToUpdateUser()"
-      style="cursor: pointer"
-    >
-      Atualizar dados cadastrais
-    </button>
-
+    <div class="button-container">
+      <button class="update-data-button" (click)="navigateToUpdateUser()">
+        Perfil
+      </button>
+      <button
+        class="upsert-social-media-button"
+        (click)="navigateToUpsertSocialMedia()"
+      >
+        Redes Sociais
+      </button>
+      <button class="create-repo-button" (click)="navigateToCreateRepo()">
+        Repositórios
+      </button>
+    </div>
     <div *ngIf="user.userSocialMedias?.length > 0" class="social-links">
       <a
         *ngFor="let media of user.userSocialMedias"

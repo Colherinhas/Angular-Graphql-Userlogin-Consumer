@@ -1,0 +1,23 @@
+<div class="add-social-media-container">
+  <h1>Adicionar Rede Social</h1>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="socialMedia">Rede Social</label>
+      <select
+        id="socialMedia"
+        [(ngModel)]="socialMediaSelected"
+        name="socialMedia"
+        required
+      >
+        <option *ngFor="let media of socialMedias" [ngValue]="media.label">
+          {{ media.label }}
+        </option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="link">Link</label>
+      <input type="url" id="link" [(ngModel)]="link" name="link" required />
+    </div>
+    <button type="submit">Adicionar</button>
+  </form>
+</div>

@@ -8,7 +8,7 @@ export class CreateUserService {
   @Inject(GraphQLService)
   private readonly $graphql: GraphQLService = inject(GraphQLService);
 
-  public execute(data: {
+  public createUser(data: {
     name: string;
     password: string;
     email: string;
