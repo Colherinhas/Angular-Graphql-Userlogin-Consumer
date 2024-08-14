@@ -2,6 +2,7 @@
   "name": "login-consumer-graphql-angular",
   "version": "0.0.0",
   "scripts": {
+    "main": "npm install && npm start",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
